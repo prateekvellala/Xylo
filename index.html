@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xylo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E0C9THF1EY"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-E0C9THF1EY');
+    </script>
+</head>
+<body>
+    <h1>Xylo: Audio Transcriber with Speaker Diarization</h1>
+    <form action="/v1/audio/transcriptions" method="post" enctype="multipart/form-data">
+        <input type="file" name="audiofile" accept="*/*">
+        <button type="submit">Transcribe</button>
+    </form>
+    <div id="message"></div>
+    <div id="message"></div>
+    <div class="info">
+        <p>Maximum file size: 2GB</p>
+        <p>Maximum file duration: No limit</p>
+        <p>Supported audio file types: .aiff, .m4a, .flac, .m4r, .wav, .m4b, .mp3, .ac3, .ogg, .oga, .mogg, .opus, .amr, .ape, .au, .dss, .m4p, .qcp, .tta, .voc, .wma, .wv, .3ga, .8svx, .aac, .aif, .alac, .flv</p>
+        <p>Supported video file types: .mov, .mp4, .m4v, .mp2, .mts, .webm, .mxf, .m2ts, m4p (with DRM), .ts</p>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <footer>
+        <p>Copyright (c) 2024 <a href="https://prateekvellala.com/">Prateek Vellala</a></p>
+    </footer>
+</body>
+</html>

@@ -1,5 +1,5 @@
 # Xylo-Frontend
-Frontend code for Xylo (https://lysoai.com/).
+Frontend for Xylo (https://lysoai.com/).
 
 Xylo is an audio transcriber with speaker diarization.
 

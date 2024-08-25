@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Xylo</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E0C9THF1EY"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
@@ -14,18 +15,24 @@
     </script>
 </head>
 <body>
-    <h1>Xylo: Audio Transcriber with Speaker Diarization</h1>
-    <form action="/v1/audio/transcriptions" method="post" enctype="multipart/form-data">
-        <input type="file" name="audiofile" accept="*/*">
-        <button type="submit">Transcribe</button>
-    </form>
-    <div id="message"></div>
-    <div id="message"></div>
-    <div class="info">
-        <p>Maximum file size: 2GB</p>
-        <p>Maximum file duration: No limit</p>
-        <p>Supported audio file types: .aiff, .m4a, .flac, .m4r, .wav, .m4b, .mp3, .ac3, .ogg, .oga, .mogg, .opus, .amr, .ape, .au, .dss, .m4p, .qcp, .tta, .voc, .wma, .wv, .3ga, .8svx, .aac, .aif, .alac, .flv</p>
-        <p>Supported video file types: .mov, .mp4, .m4v, .mp2, .mts, .webm, .mxf, .m2ts, m4p (with DRM), .ts</p>
+    <div class="container">
+        <h1>Xylo: Audio Transcriber with Speaker Diarization</h1>
+        <form action="/v1/audio/transcriptions" method="post" enctype="multipart/form-data">
+            <div class="file-input-wrapper">
+                <input type="file" name="audiofile" accept="*/*" id="file-input">
+                <label for="file-input" class="file-label">Choose File</label>
+            </div>
+            <span id="file-name"></span>
+            <button type="submit" class="submit-btn">Transcribe</button>
+        </form>
+        <div id="message" class="message"></div>
+        <div class="info">
+            <h2>File Information</h2>
+            <p><strong>Maximum File Size:</strong> 2GB</p>
+            <p><strong>Maximum File Duration:</strong> No limit</p>
+            <p><strong>Supported Audio File Types:</strong> .aiff, .m4a, .flac, .m4r, .wav, .m4b, .mp3, .ac3, .ogg, .oga, .mogg, .opus, .amr, .ape, .au, .dss, .m4p, .qcp, .tta, .voc, .wma, .wv, .3ga, .8svx, .aac, .aif, .alac, .flv</p>
+            <p><strong>Supported Video File Types:</strong> .mov, .mp4, .m4v, .mp2, .mts, .webm, .mxf, .m2ts, m4p (with DRM), .ts</p>
+        </div>
     </div>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
     <footer>

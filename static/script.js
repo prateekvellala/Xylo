@@ -1,4 +1,15 @@
 const form = document.querySelector('form');
+const fileInput = document.getElementById('file-input');
+const fileNameSpan = document.getElementById('file-name');
+
+fileInput.addEventListener('change', (e) => {
+    if (e.target.files.length > 0) {
+        fileNameSpan.textContent = e.target.files[0].name;
+    } else {
+        fileNameSpan.textContent = '';
+    }
+});
+
 form.onsubmit = async (e) => {
     e.preventDefault();
     const transcribeButton = document.querySelector('button[type="submit"]');
@@ -20,7 +31,7 @@ form.onsubmit = async (e) => {
                 const downloadLink = document.createElement('a');
                 downloadLink.href = result.filepath;
                 downloadLink.download = '';
-                downloadLink.innerText = 'Download transcription';
+                downloadLink.innerText = 'Download Transcription';
                 document.getElementById('message').appendChild(downloadLink);
             }
         } else {

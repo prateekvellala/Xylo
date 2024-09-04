@@ -34,6 +34,7 @@ form.onsubmit = async (e) => {
                 downloadLink.href = result.filepath;
                 downloadLink.download = '';
                 downloadLink.innerText = 'Download Transcription';
+                downloadLink.className = 'download-link';
                 messageElement.appendChild(downloadLink);
             }
         } else {

@@ -1,23 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Xylo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.6">
+    <meta name="description" content="A completely free, easy-to-use audio transcriber with speaker diarization that works accurately with almost any audio and video file type">
+    <meta name="author" content="Prateek Vellala">
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='assets/favicon.png') }}">
+    <link rel="apple-touch-icon" type="image/png" href="{{ url_for('static', filename='assets/apple-touch-icon.png') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E0C9THF1EY"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-E0C9THF1EY');
-    </script>
+    <title>Xylo: Audio Transcriber with Speaker Diarization</title>
 </head>
 <body>
     <div class="container">
-        <h1>Audio Transcriber with <a href="https://en.wikipedia.org/wiki/Speaker_diarisation" style="color: inherit; text-decoration: underline;">Speaker Diarization</a></h1>
+        <h1>Xylo: Audio Transcriber with <a href="https://en.wikipedia.org/wiki/Speaker_diarisation" style="color: inherit; text-decoration: underline;">Speaker Diarization</a></h1>
         <form action="/v1/audio/transcriptions" method="post" enctype="multipart/form-data">
             <div class="file-input-wrapper">
                 <input type="file" name="audiofile" accept="*/*" id="file-input">
@@ -28,7 +22,6 @@
         </form>
         <div id="message" class="message" style="display: none;"></div>
         <div class="info">
-            <h2>File Information</h2>
             <p><strong>Maximum File Size:</strong> 2GB</p>
             <p><strong>Maximum File Duration:</strong> No limit</p>
             <p><strong>Supported Audio File Types:</strong> .aiff, .m4a, .flac, .m4r, .wav, .m4b, .mp3, .ac3, .ogg, .oga, .mogg, .opus, .amr, .ape, .au, .dss, .m4p, .qcp, .tta, .voc, .wma, .wv, .3ga, .8svx, .aac, .aif, .alac, .flv</p>

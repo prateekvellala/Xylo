@@ -6,13 +6,11 @@ html, body {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Arial';
     line-height: 1.6;
-    color: #000000;
-    background-color: #0d0a0b;
-    background-image: linear-gradient(315deg, #0d0a0b 0%, #009fc2 74%);
-    margin: 0;
-    padding: 0;
+    color: #100F0F;
+    background-color: #E1DDD2;
+    overflow-y: auto;
 }
 
 .container {
@@ -22,9 +20,10 @@ body {
 }
 
 h1 {
-    color: #000000;
+    color: #100F0F;
     text-align: center;
     margin-bottom: 30px;
+    font-size: 30px;
 }
 
 form {
@@ -44,7 +43,6 @@ form {
 }
 
 .file-input-wrapper input[type=file] {
-    font-size: 100px;
     position: absolute;
     left: 0;
     top: 0;
@@ -57,12 +55,12 @@ form {
 .file-label, .submit-btn {
     background-color: transparent;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    color: #000000;
+    color: #100F0F;
     padding: 10px 20px;
     border-radius: 4px;
     cursor: pointer;
     display: inline-block;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.5;
     box-sizing: border-box;
     width: 125px;
@@ -73,15 +71,16 @@ form {
     background-color: transparent;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border: none;
+    font-weight: normal;
     transition: background-color 0.3s ease;
 }
 
 .submit-btn:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(16, 15, 15, 0.1);
 }
 
 .submit-btn:disabled {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(16, 15, 15, 0.1);
     cursor: not-allowed;
 }
 
@@ -101,12 +100,12 @@ form {
 }
 
 .info h2 {
-    color: #000000;
+    color: #100F0F;
     margin-top: 0;
 }
 
 .download-link {
-    color: #000000;
+    color: #100F0F;
     text-decoration: underline;
 }
 
@@ -117,12 +116,12 @@ footer {
     width: 100%;
     text-align: center;
     background-color: transparent;
-    color: #000000;
+    color: #100F0F;
     padding: 10px 0;
 }
 
 footer a {
-    color: #000000;
+    color: #100F0F;
     text-decoration: none;
 }
 
@@ -132,8 +131,7 @@ footer a:hover {
 
 #file-name {
     margin-left: 10px;
-    font-style: italic;
-    color: #000000;
+    color: #100F0F;
     flex: 1;
     white-space: nowrap;
     overflow: hidden;

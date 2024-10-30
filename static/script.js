@@ -3,11 +3,7 @@ const fileInput = document.getElementById('file-input');
 const fileNameSpan = document.getElementById('file-name');
 
 fileInput.addEventListener('change', (e) => {
-    if (e.target.files.length > 0) {
-        fileNameSpan.textContent = e.target.files[0].name;
-    } else {
-        fileNameSpan.textContent = '';
-    }
+    fileNameSpan.textContent = e.target.files.length > 0 ? e.target.files[0].name : '';
 });
 
 form.onsubmit = async (e) => {
